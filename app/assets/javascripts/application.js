@@ -23,8 +23,30 @@ $(document).ready(function() {
     var view = new app.views.ProjectView({ model: project });
     $('#project-list').append(view.render().el);
   });
+  
+ var me = new app.models.User({
+    first_name: "Mathilda",
+    last_name: "Thompson",
+    image_url: 'uploads/mathilda.jpg',
+    bio: 'Well ard coder from NYC',
+    mission: 'Complete level 12 on Bomberman and save the world from itself'
+  });
+  new app.views.UserView({
+    model: me
+  }).render();
 
   // Create a view for the first Project and render it
   // var view = new app.views.ProjectView({ model: projectList.first() });
   // $('#project-list').append(view.render().el);
+
+  // var user = new app.models.User({
+  //   first_name: "Mathila",
+  //   last_name: "Thompson",
+  //   image_url: 'uploads/mathilda.jpg',
+  //   bio: 'Well ard coder from NYC',
+  //   mission: 'Complete level 12 on Bomberman and save the world from itself'
+  // });
+  // var user_view = new app.views.UserView({
+  //   model: user });
+
 });
